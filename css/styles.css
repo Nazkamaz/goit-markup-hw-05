@@ -73,7 +73,7 @@ img
 a {
   text-decoration: none;
   color: var(--primary-text-color)
-  transition-duration: 250ms;;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 a:hover, a:focus {
   color: var(--accent-color);
@@ -173,7 +173,7 @@ border-radius: 2px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   align-items: center;
-  transition-duration: 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
 .header{
@@ -233,8 +233,8 @@ left: 0;
 width: 100%;
 height: 100%;
 background: rgba(0, 0, 0, 0.2);
-transition-duration: 250ms;
-cubic-bezier:(0.4, 0, 0.2, 1);
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),;
+
 }
 
 .backdrop.is-hidden{
@@ -457,7 +457,7 @@ padding-top: 30px;
   height: 44px;
   fill: #AFB1B8;
   border-radius: 50%;
-  transition: background-color,fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .social-link:hover, .social-link:focus{
@@ -614,6 +614,7 @@ margin-bottom: 50px;
   fill: #ffffff;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
     }
 
 .footer-social-list {
@@ -669,7 +670,7 @@ margin-bottom: 20px;
   background: #F5F4FA;
   border-radius: 4px;
   padding: 6px 22px;
-  transition: collor,background-color,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), collor 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
  
 .active-nav
@@ -700,7 +701,7 @@ margin-bottom: 20px;
   }
 
   .projects-galery-link {
-    transition: collor,background-color,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), collor 250ms cubic-bezier(0.4, 0, 0.2, 1);;
   }
 
 .projects-galery-link:hover, .projects-galery-link:focus{
@@ -724,7 +725,6 @@ margin-bottom: 20px;
 
   .projects-galery-item {
     display: flex;
-    position: relative;
     margin-right: 30px;
     margin-bottom: 30px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -755,13 +755,13 @@ margin-bottom: 20px;
 .projects-description{
   position: absolute;
   background: rgba(33, 150, 243, 0.9);
-  height: 294px;
+  height: 100%;
   width: 100%;
   top: 0;
   left: 0;
   opacity: 0;
   transform: translateY(100%);
-  transition: opacity, transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-galery-item:hover .projects-description {
@@ -777,4 +777,8 @@ margin-bottom: 20px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: #FFFFFF;
+}
+
+.projects-card{
+  position: relative;
 }
